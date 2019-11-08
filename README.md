@@ -212,7 +212,7 @@ stdin.on('data', function(key){
 });
 ```
 
-Y luego en el arduino vamos a leer con `byte input = Serial.read()`.
+Y luego en el arduino vamos a leer con `Serial.read()`.
 
 ```cpp
   if (Serial.available()) {
