@@ -141,6 +141,7 @@ A menudo hay problemas instalando `serialport`, si no funciona prueba a usar la 
 Vamos a hacer una prueba con el siguiente programa en nodejs
 
 ```js
+// list-ports.js
 const SerialPort = require('serialport')
 
 SerialPort.list((err, ports) => ports.forEach(port => console.log(port)))
@@ -158,6 +159,7 @@ Ya sabemos que funciona bien.
 2. Usar node.js y serialport para leer el estado de los botones en el ultimo desafio.
 
 ```js
+// read-serial.js
 const SerialPort = require('serialport')
 const Readline = SerialPort.parsers.Readline
 const port = new SerialPort('COM5')  // <--- PUERTO DONDE ESTA CONECTADO EL ARDUINO
