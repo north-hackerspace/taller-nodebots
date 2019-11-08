@@ -165,4 +165,4 @@ const port = new SerialPort('COM5')  // <--- PUERTO DONDE ESTA CONECTADO EL ARDU
 port.on('data', data => console.log(data))
 ```
 
-![img/conexcaoarduinonote_z4ADL2bKPs.jpg](img/conexcaoarduinonote_z4ADL2bKPs.jpg)
+![img/6.arduinotonode.jpg](img/6.arduinotonode.jpg)
