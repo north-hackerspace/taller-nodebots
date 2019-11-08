@@ -102,12 +102,12 @@ El servomotor tiene 3 cables:
 
 # Quinto Circuito: Servomotor controlado por botones
 
+![img/examples.digitalinputpullup.png](img/examples.digitalinputpullup.png)
+
 1. Conectar 2 botones para recibir senales digitales a pines D2 y D4.
 2. Usar el modo especial `INPUT_PULLUP` para leer los botons sin resistencia
 
-![img/examples.digitalinputpullup.png](img/examples.digitalinputpullup.png)
-
-# Introduccion a Firmata y Node.js
+# Introduccion a [Serialport](https://github.com/serialport/node-serialport) y Node.js
 
 Vamos a controlar el Arduino a traves de Node.js con nuestro PC.
 
@@ -115,19 +115,17 @@ Vamos a controlar el Arduino a traves de Node.js con nuestro PC.
 2. Bajarse un editor de texto ([VS Code](https://code.visualstudio.com/download))
 3. Crear un nuevo projecto.
 4. Abrir la terminal e inicializar projecto (`npm init -y`)
-5. Instalar Serialport (`npm i serialport`)
+5. Instalar [Serialport](https://github.com/serialport/node-serialport) (`npm i serialport`)
 
-Vamos a hacer una prueba con el siguiente programa en Arduino:
+A menudo hay problemas instalando `serialport`, si no funciona prueba a usar la ultima version de nodejs e instalar otra vez. 
 
-```cpp
-
-
-```
-
-Y el siguiente program en nodejs
+Vamos a hacer una prueba con el siguiente programa en nodejs
 
 ```js
+const SerialPort = require('serialport')
 
+SerialPort.list((err, ports) => ports.forEach(port => console.log(port)));
 ```
 
+Esto nos dara un listado de puertos seriales (En windows `COM5` etc, en unix/mac `/dev/cu.wchusbserial`)
 
