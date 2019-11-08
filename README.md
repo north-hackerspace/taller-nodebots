@@ -143,7 +143,7 @@ Vamos a hacer una prueba con el siguiente programa en nodejs
 ```js
 const SerialPort = require('serialport')
 
-SerialPort.list((err, ports) => ports.forEach(port => console.log(port)));
+SerialPort.list((err, ports) => ports.forEach(port => console.log(port)))
 ```
 
 Esto nos dara un listado de puertos seriales (En windows `COM5` etc, en unix/mac `/dev/cu.wchusbserial`).
@@ -157,5 +157,10 @@ Ya sabemos que funciona bien.
 1. El arduino manda datos a traves de `Serial.write()`.
 2. Usar node.js y serialport para leer el estado de los botones en el ultimo desafio.
 
-
+```js
+const SerialPort = require('serialport')
+const Readline = SerialPort.parsers.Readline
+const port = new SerialPort('COM5')  // <--- PUERTO DONDE ESTA CONECTADO EL ARDUINO
+port.pipe(new Readline()).on('data', console.log)
+```
 
