@@ -1,4 +1,3 @@
-
 // write-serial.js
 const SerialPort = require('serialport')
 const Buffer = require('buffer').Buffer;
@@ -14,11 +13,13 @@ stdin.setEncoding('utf8');
 stdin.on('data', function(key){
     if (key == RIGHT_ARROW) {
         process.stdout.write('-->\n'); 
-        port.write(Buffer.from([0x01]));
+        port.write(Buffer.from([0]));
     }
     if (key == LEFT_ARROW) { 
         process.stdout.write('<--\n');
-        port.write(Buffer.from([0x02]));
+        port.write(Buffer.from([180]));
     }
     if (key == CTRL_C) { process.exit(); } 
 });
+
+console.log(Buffer.from([180]))
