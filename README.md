@@ -217,7 +217,7 @@ Y luego en el arduino vamos a leer con `byte input = Serial.read()`.
 ```cpp
   if (Serial.available()) {
     // get the new byte:
-    int angle = (int)Serial.read();  // <--- the value 0 or 180 arrives from node.js
+    int angle = (int)Serial.read();  // <--- el valor de 0 o 180 llega de node.js
     // set the servo to that angle
     myservo.write(angle);
   }
