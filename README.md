@@ -112,7 +112,7 @@ El servomotor tiene 3 cables:
 
 ## Donde estan los pines con PWM?
 
-![img/nano.pinout2.jpg](img/nano.pinout.jpg)
+![img/nano.pinout2.jpg](img/nano.pinout2.jpg)
 
 ## Que es el PWM? (cuanto se enciende y se apaga por ciclo)
 
