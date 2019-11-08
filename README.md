@@ -176,7 +176,6 @@ port.on('data', data => console.log(data))
 
 ```js
 // write-serial.js
-// read-serial.js
 const SerialPort = require('serialport')
 const port = new SerialPort('COM5')  // <--- PUERTO DONDE ESTA CONECTADO EL ARDUINO
 const stdin = process.stdin;
