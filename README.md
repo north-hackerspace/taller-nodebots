@@ -177,22 +177,26 @@ port.on('data', data => console.log(Number(data)))
 ```js
 // write-serial.js
 const SerialPort = require('serialport')
+const Buffer = require('buffer').Buffer;
 const port = new SerialPort('COM5')  // <--- PUERTO DONDE ESTA CONECTADO EL ARDUINO
 const stdin = process.stdin;
+const RIGHT_ARROW = '\u001B\u005B\u0043';
+const LEFT_ARROW = '\u001B\u005B\u0044';
+const CTRL_C = '\u0003';
+
 stdin.setRawMode(true);
 stdin.resume();
 stdin.setEncoding('utf8');
-
 stdin.on('data', function(key){
-    if (key == '\u001B\u005B\u0043') {    // right
-        process.stdout.write('right'); 
-        port.write(1);
+    if (key == RIGHT_ARROW) {
+        process.stdout.write('-->\n'); 
+        port.write(Buffer.from([0x01]));
     }
-    if (key == '\u001B\u005B\u0044') {    // left
-        process.stdout.write('left');
-        port.write(2);
+    if (key == LEFT_ARROW) { 
+        process.stdout.write('<--\n');
+        port.write(Buffer.from([0x02]));
     }
-    if (key == '\u0003') { process.exit(); }    // ctrl-c
+    if (key == CTRL_C) { process.exit(); } 
 });
 ```
 
