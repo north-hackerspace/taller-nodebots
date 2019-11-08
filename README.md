@@ -161,8 +161,7 @@ Ya sabemos que funciona bien.
 ```js
 // read-serial.js
 const SerialPort = require('serialport')
-const Readline = SerialPort.parsers.Readline
 const port = new SerialPort('COM5')  // <--- PUERTO DONDE ESTA CONECTADO EL ARDUINO
-port.pipe(new Readline()).on('data', console.log)
+port.on('data', data => console.log(data))
 ```
 
