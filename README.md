@@ -103,7 +103,9 @@ El servomotor tiene 3 cables:
 # Quinto Circuito: Servomotor controlado por botones
 
 1. Conectar 2 botones para recibir senales digitales a pines D2 y D4.
-2. Cada boton tiene una resistencia de 10K como la resistencia.
+2. Usar el modo especial `INPUT_PULLUP` para leer los botons sin resistencia
+
+![img/examples.digitalinputpullup.png](img/examples.digitalinputpullup.png)
 
 # Introduccion a Firmata y Node.js
 
