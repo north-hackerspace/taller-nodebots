@@ -173,3 +173,28 @@ port.on('data', data => console.log(data))
 
 1. El arduino lee datos a traves de `Serial.read()`.
 2. Vamos a controlar el servomotor a traves de leer el teclado con node.js.
+
+```js
+// write-serial.js
+// read-serial.js
+const SerialPort = require('serialport')
+const port = new SerialPort('COM5')  // <--- PUERTO DONDE ESTA CONECTADO EL ARDUINO
+const stdin = process.stdin;
+stdin.setRawMode(true);
+stdin.resume();
+stdin.setEncoding('utf8');
+
+stdin.on('data', function(key){
+    if (key == '\u001B\u005B\u0043') {    // right
+        process.stdout.write('right'); 
+        port.write(1);
+    }
+    if (key == '\u001B\u005B\u0044') {    // left
+        process.stdout.write('left');
+        port.write(2);
+    }
+    if (key == '\u0003') { process.exit(); }    // ctrl-c
+});
+```
+
+Y luego en el arduino vamos a leer con `byte input = Serial.read()`
