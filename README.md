@@ -212,13 +212,16 @@ stdin.on('data', function(key){
 });
 ```
 
-Y luego en el arduino vamos a leer con `Serial.read()`.
+Y luego en el arduino usamos **Ejemplos > Servo > Knob** otra vez, pero leyendo con `Serial.read()`.
 
 ```cpp
+loop() {
   if (Serial.available()) {
     // get the new byte:
     int angle = (int)Serial.read();  // <--- el valor de 0 o 180 llega de node.js
     // set the servo to that angle
     myservo.write(angle);
   }
+  delay(100); // espera a que el servo comienze a moverse
+}
 ```
