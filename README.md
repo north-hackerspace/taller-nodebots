@@ -56,7 +56,7 @@ Se usa para conectar componentes. Se puedan crear **varias conexiones en cada un
 2. La *PATA CORTA* del LED se conecta con el *NEGATIVO* y as su vez, con el pin GND (Groud = Tierra = Negativo).
 3. Se puede usar una resistencia de 330 Ohm en el LED D13 pero es opcional, ya que el Arduino ya lleva una internamente.
 
-<img src="img/1.blink.jpg" width="600">
+<img src="img/1.blink.jpg" width="800">
 
 # Segundo Circuito: Fotoresistencia
 
