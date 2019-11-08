@@ -1,0 +1,24 @@
+
+// write-serial.js
+const SerialPort = require('serialport')
+const Buffer = require('buffer').Buffer;
+const port = new SerialPort('COM5')  // <--- PUERTO DONDE ESTA CONECTADO EL ARDUINO
+const stdin = process.stdin;
+const RIGHT_ARROW = '\u001B\u005B\u0043';
+const LEFT_ARROW = '\u001B\u005B\u0044';
+const CTRL_C = '\u0003';
+
+stdin.setRawMode(true);
+stdin.resume();
+stdin.setEncoding('utf8');
+stdin.on('data', function(key){
+    if (key == RIGHT_ARROW) {
+        process.stdout.write('-->\n'); 
+        port.write(Buffer.from([0x01]));
+    }
+    if (key == LEFT_ARROW) { 
+        process.stdout.write('<--\n');
+        port.write(Buffer.from([0x02]));
+    }
+    if (key == CTRL_C) { process.exit(); } 
+});
