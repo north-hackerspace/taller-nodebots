@@ -112,6 +112,8 @@ El servomotor tiene 3 cables:
 2. Usar el modo especial `INPUT_PULLUP` para leer los botons sin resistencia
 3. Un boton mueve el servomotor hacia un lado, otro hacia el otro.
 
+![5.internal_pullup.jpg](5.internal_pullup.jpg)
+
 # Introduccion a [Serialport](https://github.com/serialport/node-serialport) y Node.js
 
 Vamos a controlar el Arduino a traves de Node.js con nuestro PC.
