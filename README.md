@@ -50,7 +50,7 @@ Se usa para conectar componentes. Se puedan crear **varias conexiones en cada un
 
 ![img/breadboard.front-back.jpg](img/breadboard.front-back.jpg)
 
-# Primer Circuito: Blink
+# Desafío 1: Blink
 
 1. Conectar LED al pin D13: *PATA LARGA* es *POSITIVO* y va hacia el ARDUINO
 2. La *PATA CORTA* del LED se conecta con el *NEGATIVO* y as su vez, con el pin GND (Groud = Tierra = Negativo).
@@ -58,7 +58,7 @@ Se usa para conectar componentes. Se puedan crear **varias conexiones en cada un
 
 <img src="img/1.blink.jpg" width="800">
 
-# Segundo Circuito: Fotoresistencia
+# Desafío 2: Fotoresistencia
 
 ![img/examples.analoginoutserial.png](img/examples.analoginoutserial.png)
 
@@ -68,7 +68,7 @@ Se usa para conectar componentes. Se puedan crear **varias conexiones en cada un
 
 ![img/2.photoresistor.gif](img/2.photoresistor.gif)
 
-# Tercer Circuito: Zumbador (Buzzer)
+# Desafío 3: Zumbador (Buzzer)
 
 ![img/examples.tonepitchfollower.png](img/examples.tonepitchfollower.png)
 
@@ -77,7 +77,11 @@ Se usa para conectar componentes. Se puedan crear **varias conexiones en cada un
 
 ![img/3.buzzer.png](img/3.buzzer.png)
 
-# Cuarto Circuito: Servomotor
+Como crea el arduino sonido?
+
+![img/51c495ebce395f1b5a000000.png](img/51c495ebce395f1b5a000000.png)
+
+# Desafío 4: Servomotor
 
 ![img/examples.analogwrite.png](img/examples.analogwrite.png)
 
@@ -100,12 +104,13 @@ El servomotor tiene 3 cables:
 
 ![img/pwm.png](img/pwm.png)
 
-# Quinto Circuito: Servomotor controlado por botones
+# Desafío 5: Servomotor controlado por botones
 
 ![img/examples.digitalinputpullup.png](img/examples.digitalinputpullup.png)
 
 1. Conectar 2 botones para recibir senales digitales a pines D2 y D4.
 2. Usar el modo especial `INPUT_PULLUP` para leer los botons sin resistencia
+3. Un boton mueve el servomotor hacia un lado, otro hacia el otro.
 
 # Introduccion a [Serialport](https://github.com/serialport/node-serialport) y Node.js
 
