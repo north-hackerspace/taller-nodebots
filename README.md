@@ -98,5 +98,5 @@ El servomotor tiene 3 cables:
 
 ## Que es el PWM? (cuanto se enciende y se apaga por ciclo)
 
-![img/pwm.png]
+![img/pwm.png](img/pwm.png)
 
