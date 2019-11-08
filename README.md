@@ -202,11 +202,11 @@ stdin.setEncoding('utf8');
 stdin.on('data', function(key){
     if (key == RIGHT_ARROW) {
         process.stdout.write('-->\n'); 
-        port.write(Buffer.from([0]));
+        port.write(Buffer.from([0]));   // Aqui mandamos un byte de `0`
     }
     if (key == LEFT_ARROW) { 
         process.stdout.write('<--\n');
-        port.write(Buffer.from([180]));
+        port.write(Buffer.from([180])); // Aqui mandamos un byte con `180`
     }
     if (key == CTRL_C) { process.exit(); } 
 });
