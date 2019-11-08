@@ -100,3 +100,32 @@ El servomotor tiene 3 cables:
 
 ![img/pwm.png](img/pwm.png)
 
+# Quinto Circuito: Servomotor controlado por botones
+
+1. Conectar 2 botones para recibir senales digitales a pines D2 y D4.
+2. Cada boton tiene una resistencia de 10K como la resistencia.
+
+# Introduccion a Firmata y Node.js
+
+Vamos a controlar el Arduino a traves de Node.js con nuestro PC.
+
+1. Bajarse e [Instalar Node.js](https://nodejs.org/en/download/)
+2. Bajarse un editor de texto ([VS Code](https://code.visualstudio.com/download))
+3. Crear un nuevo projecto.
+4. Abrir la terminal e inicializar projecto (`npm init -y`)
+5. Instalar Serialport (`npm i serialport`)
+
+Vamos a hacer una prueba con el siguiente programa en Arduino:
+
+```cpp
+
+
+```
+
+Y el siguiente program en nodejs
+
+```js
+
+```
+
+
