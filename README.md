@@ -202,14 +202,23 @@ stdin.setEncoding('utf8');
 stdin.on('data', function(key){
     if (key == RIGHT_ARROW) {
         process.stdout.write('-->\n'); 
-        port.write(Buffer.from([0x01]));
+        port.write(Buffer.from([0]));
     }
     if (key == LEFT_ARROW) { 
         process.stdout.write('<--\n');
-        port.write(Buffer.from([0x02]));
+        port.write(Buffer.from([180]));
     }
     if (key == CTRL_C) { process.exit(); } 
 });
 ```
 
-Y luego en el arduino vamos a leer con `byte input = Serial.read()`
+Y luego en el arduino vamos a leer con `byte input = Serial.read()`.
+
+```cpp
+  if (Serial.available()) {
+    // get the new byte:
+    int angle = (int)Serial.read();  // <--- the value 0 or 180 arrives from node.js
+    // set the servo to that angle
+    myservo.write(angle);
+  }
+```
