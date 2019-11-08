@@ -64,13 +64,19 @@ Se usa para conectar componentes. Se puedan crear **varias conexiones en cada un
 
 # Desafío 2: Fotoresistencia
 
-![img/examples.analoginoutserial.png](img/examples.analoginoutserial.png)
+![img/examples.analogread.png](img/examples.analogread.png)
 
 1. Conectar Fotoresistencia a cualquier pin A0-A7.
 2. Usar `int valor = analogRead(A0);` para leer el valor de la fotoresistencia, que sera entre 0 y 1023.
 3. Abrir `Herramientas > Monitor de Serie` para ver los valores que manda la fotoresistencia al PC por USB
 
 ![img/2.photoresistor.gif](img/2.photoresistor.gif)
+
+## PUNTOS EXTRA
+
+Controlar la brilleza del LED usando la fotoresistencia
+
+![img/examples.analoginoutserial.png](img/examples.analoginoutserial.png)
 
 
 
@@ -91,7 +97,7 @@ Como crea el arduino sonido?
 
 # Desafío 4: Servomotor
 
-![img/examples.analogwrite.png](img/examples.analogwrite.png)
+![img/examples.servoknob.png](img/examples.servoknob.png)
 
 El servomotor tiene 3 cables:
 
