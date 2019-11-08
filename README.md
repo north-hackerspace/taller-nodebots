@@ -162,7 +162,7 @@ Ya sabemos que funciona bien.
 // read-serial.js
 const SerialPort = require('serialport')
 const port = new SerialPort('COM5')  // <--- PUERTO DONDE ESTA CONECTADO EL ARDUINO
-port.on('data', data => console.log(data))
+port.on('data', data => console.log(Number(data)))
 ```
 
 ![img/6.arduinotonode.jpg](img/6.arduinotonode.jpg)
