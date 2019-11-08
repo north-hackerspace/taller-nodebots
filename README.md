@@ -64,13 +64,19 @@ Se usa para conectar componentes. Se puedan crear **varias conexiones en cada un
 
 # Desafío 2: Fotoresistencia
 
-![img/examples.analoginoutserial.png](img/examples.analoginoutserial.png)
+![img/examples.analogread.png](img/examples.analogread.png)
 
 1. Conectar Fotoresistencia a cualquier pin A0-A7.
 2. Usar `int valor = analogRead(A0);` para leer el valor de la fotoresistencia, que sera entre 0 y 1023.
 3. Abrir `Herramientas > Monitor de Serie` para ver los valores que manda la fotoresistencia al PC por USB
 
 ![img/2.photoresistor.gif](img/2.photoresistor.gif)
+
+## PUNTOS EXTRA
+
+Controlar la brilleza del LED usando la fotoresistencia
+
+![img/examples.analoginoutserial.png](img/examples.analoginoutserial.png)
 
 
 
@@ -91,7 +97,7 @@ Como crea el arduino sonido?
 
 # Desafío 4: Servomotor
 
-![img/examples.analogwrite.png](img/examples.analogwrite.png)
+![img/examples.servoknob.png](img/examples.servoknob.png)
 
 El servomotor tiene 3 cables:
 
@@ -162,7 +168,42 @@ Ya sabemos que funciona bien.
 // read-serial.js
 const SerialPort = require('serialport')
 const port = new SerialPort('COM5')  // <--- PUERTO DONDE ESTA CONECTADO EL ARDUINO
-port.on('data', data => console.log(data))
+port.on('data', data => console.log(Number(data)))
 ```
 
-![img/conexcaoarduinonote_z4ADL2bKPs.jpg](img/conexcaoarduinonote_z4ADL2bKPs.jpg)
+![img/6.arduinotonode.jpg](img/6.arduinotonode.jpg)
+
+
+
+# Desafío 7: Mandar datos al arduino.
+
+1. El arduino lee datos a traves de `Serial.read()`.
+2. Vamos a controlar el servomotor a traves de leer el teclado con node.js.
+
+```js
+// write-serial.js
+const SerialPort = require('serialport')
+const Buffer = require('buffer').Buffer;
+const port = new SerialPort('COM5')  // <--- PUERTO DONDE ESTA CONECTADO EL ARDUINO
+const stdin = process.stdin;
+const RIGHT_ARROW = '\u001B\u005B\u0043';
+const LEFT_ARROW = '\u001B\u005B\u0044';
+const CTRL_C = '\u0003';
+
+stdin.setRawMode(true);
+stdin.resume();
+stdin.setEncoding('utf8');
+stdin.on('data', function(key){
+    if (key == RIGHT_ARROW) {
+        process.stdout.write('-->\n'); 
+        port.write(Buffer.from([0x01]));
+    }
+    if (key == LEFT_ARROW) { 
+        process.stdout.write('<--\n');
+        port.write(Buffer.from([0x02]));
+    }
+    if (key == CTRL_C) { process.exit(); } 
+});
+```
+
+Y luego en el arduino vamos a leer con `byte input = Serial.read()`
