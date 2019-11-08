@@ -50,6 +50,8 @@ Se usa para conectar componentes. Se puedan crear **varias conexiones en cada un
 
 ![img/breadboard.front-back.jpg](img/breadboard.front-back.jpg)
 
+
+
 # Desafío 1: Blink
 
 1. Conectar LED al pin D13: *PATA LARGA* es *POSITIVO* y va hacia el ARDUINO
@@ -57,6 +59,8 @@ Se usa para conectar componentes. Se puedan crear **varias conexiones en cada un
 3. Se puede usar una resistencia de 330 Ohm en el LED D13 pero es opcional, ya que el Arduino ya lleva una internamente.
 
 <img src="img/1.blink.jpg" width="800">
+
+
 
 # Desafío 2: Fotoresistencia
 
@@ -67,6 +71,8 @@ Se usa para conectar componentes. Se puedan crear **varias conexiones en cada un
 3. Abrir `Herramientas > Monitor de Serie` para ver los valores que manda la fotoresistencia al PC por USB
 
 ![img/2.photoresistor.gif](img/2.photoresistor.gif)
+
+
 
 # Desafío 3: Zumbador (Buzzer)
 
@@ -80,6 +86,8 @@ Se usa para conectar componentes. Se puedan crear **varias conexiones en cada un
 Como crea el arduino sonido?
 
 ![img/51c495ebce395f1b5a000000.png](img/51c495ebce395f1b5a000000.png)
+
+
 
 # Desafío 4: Servomotor
 
@@ -104,6 +112,8 @@ El servomotor tiene 3 cables:
 
 ![img/pwm.png](img/pwm.png)
 
+
+
 # Desafío 5: Servomotor controlado por botones
 
 ![img/examples.digitalinputpullup.png](img/examples.digitalinputpullup.png)
@@ -113,6 +123,8 @@ El servomotor tiene 3 cables:
 3. Un boton mueve el servomotor hacia un lado, otro hacia el otro.
 
 ![img/5.internal_pullup.jpg](img/5.internal_pullup.jpg)
+
+
 
 # Introduccion a [Serialport](https://github.com/serialport/node-serialport) y Node.js
 
@@ -137,6 +149,8 @@ SerialPort.list((err, ports) => ports.forEach(port => console.log(port)));
 Esto nos dara un listado de puertos seriales (En windows `COM5` etc, en unix/mac `/dev/cu.wchusbserial`).
 
 Ya sabemos que funciona bien. 
+
+
 
 # Desafío 6: Leer datos del arduino.
 
