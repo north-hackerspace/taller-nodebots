@@ -97,7 +97,7 @@ Como crea el arduino sonido?
 
 # Desafío 4: Servomotor
 
-![img/examples.servoknob.png](img/examples.servoknob.png)
+![img/examples.analoginoutserial.png](img/examples.analoginoutserial.png)
 
 El servomotor tiene 3 cables:
 
@@ -118,7 +118,13 @@ El servomotor tiene 3 cables:
 
 ![img/pwm.png](img/pwm.png)
 
+## USAR LA LIBRERIA
 
+La libreria `Servo.h` reduce codigo y nos abstrae el controlar el servo con PWM. 
+
+Hace lo mismo que `analogWrite()` pero tiene mayor compatibilidad con diferentes placas.
+
+![img/examples.servoknob.png](img/examples.servoknob.png)
 
 # Desafío 5: Servomotor controlado por botones
 
