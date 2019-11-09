@@ -66,7 +66,7 @@ Se usa para conectar componentes. Se puedan crear **varias conexiones en cada un
 
 ![img/examples.analogread.png](img/examples.analogread.png)
 
-1. Conectar Fotoresistencia a cualquier pin A0-A7.
+1. Conectar Fotoresistencia al pin A0.
 2. Usar `int valor = analogRead(A0);` para leer el valor de la fotoresistencia, que sera entre 0 y 1023.
 3. Abrir `Herramientas > Monitor de Serie` para ver los valores que manda la fotoresistencia al PC por USB
 
