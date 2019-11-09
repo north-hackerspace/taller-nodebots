@@ -233,9 +233,9 @@ Igual que en el ultimo desafio. Pero vamos a controlar el servomotor con el rato
 
 Necesitamos:
 
-- Arduino conectado al Servomotor
-- Arduino conectado al Zumbador
-- Nodejs con `npm install iohook`
+- Servomotor conectado al Arduino (pin D9)
+- Zumbador conectado al Arduino (pin D6)
+- Nodejs con `npm install iohook` y `serialport`
 
 ```js
 const ioHook = require('iohook');
