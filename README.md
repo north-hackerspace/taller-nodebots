@@ -84,7 +84,7 @@ Controlar la brilleza del LED usando la fotoresistencia
 
 ![img/examples.tonepitchfollower.png](img/examples.tonepitchfollower.png)
 
-1. Conectar el Zumbador a un pin con PWM (Ver [#pinout](#Pinout))
+1. Conectar el Zumbador a un pin con PWM (Ver [##donde-estan-los-pines-con-pwm](##donde-estan-los-pines-con-pwm))
 2. Usar `tone(PIN, FREQUENCY, DURATION)` para generar un tono basado en la fotoresistencia.
 
 ![img/3.buzzer.png](img/3.buzzer.png)
