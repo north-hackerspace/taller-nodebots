@@ -194,7 +194,6 @@ port.on('data', data => console.log(Number(data)))
 ```js
 // write-serial.js
 const SerialPort = require('serialport')
-const Buffer = require('buffer').Buffer;
 const port = new SerialPort('COM5')  // <--- PUERTO DONDE ESTA CONECTADO EL ARDUINO
 const stdin = process.stdin;
 const RIGHT_ARROW = '\u001B\u005B\u0043';
@@ -207,11 +206,11 @@ stdin.setEncoding('utf8');
 stdin.on('data', function(key){
     if (key == RIGHT_ARROW) {
         process.stdout.write('-->\n'); 
-        port.write(Buffer.from([0]));   // Aqui mandamos un byte de `0`
+        port.write([0]);   // Aqui mandamos un byte de `0`
     }
     if (key == LEFT_ARROW) { 
         process.stdout.write('<--\n');
-        port.write(Buffer.from([180])); // Aqui mandamos un byte con `180`
+        port.write([180]); // Aqui mandamos un byte con `180`
     }
     if (key == CTRL_C) { process.exit(); } 
 });
