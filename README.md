@@ -28,6 +28,8 @@
 1. Conectar el Arduino por USB
 2. Ir a Herramientas y selecionar `Arduino Nano`, `ATMEGA328P`, y el puerto que corresponda.
 
+OJO! Algunos arduinos necesitan el `ATMEGA328P (Old Bootloader)`, prueba ese si el otro no funciona.
+
 ![img/herramientas.png](img/herramientas.png)
 
 ## Para subir un codigo basico al Arduino
