@@ -229,7 +229,9 @@ loop() {
 
 # Desafío FINAL: Dispara a tu compi!
 
-Igual que en el ultimo desafio. Pero vamos a controlar el servomotor con el raton del PC y hacer un zumbido cuando dispares.
+Igual que en el ultimo desafio. Pero vamos a controlar el servomotor con el raton del PC y hacer un zumbido cuando le des al boton.
+
+APUNTAAAA Y DISPARA!
 
 Necesitamos:
 
