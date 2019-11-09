@@ -162,7 +162,7 @@ Vamos a hacer una prueba con el siguiente programa en nodejs
 // list-ports.js
 const SerialPort = require('serialport')
 
-SerialPort.list((err, ports) => ports.forEach(port => console.log(port)))
+SerialPort.list().then(ports => ports.forEach(port => console.log(port)))
 ```
 
 Esto nos dara un listado de puertos seriales (En windows `COM5` etc, en unix/mac `/dev/cu.wchusbserial`).
