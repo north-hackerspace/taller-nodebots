@@ -93,9 +93,11 @@ PREGUNTA: Como crea el arduino sonido?
 
 RESPUESTA: Encendiendo y apagando un pin muy rapidamente. 
 
+Cuanto más rápido enciende y apaga (mas alta la frequencia), más agudo será el sonido.
+
 ![img/51c495ebce395f1b5a000000.png](img/51c495ebce395f1b5a000000.png)
 
-Cuanto más rápido enciende y apaga (mas alta la frequencia), más agudo será el sonido.
+
 
 # Desafío 4: Servomotor
 
