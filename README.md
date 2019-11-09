@@ -182,7 +182,7 @@ port.on('data', data => console.log(Number(data)))
 
 # Desafío 7: Mandar datos al arduino.
 
-![img/7.nodetoarduino.jpg](img/6.arduinotonode.jpg)
+![img/7.nodetoarduino.jpg](img/7.nodetoarduino.jpg)
 
 1. El arduino lee datos a traves de `Serial.read()`.
 2. Vamos a controlar el servomotor a traves de leer el teclado con node.js.
