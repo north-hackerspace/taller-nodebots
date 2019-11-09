@@ -270,3 +270,9 @@ ioHook
 ![img/examples.firmata.png](img/examples.firmata.png)
 
 Si hay tiempo vemos un poco que es Firmata y Johnny Five.
+
+# Robot luchador
+
+Pinchar aqui:
+
+https://github.com/nodebotsES/simplebot
