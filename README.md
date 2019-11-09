@@ -185,7 +185,7 @@ port.on('data', data => console.log(Number(data)))
 ![img/7.nodetoarduino.jpg](img/7.nodetoarduino.jpg)
 
 1. El arduino lee datos a traves de `Serial.read()`.
-2. Vamos a controlar el servomotor a traves de leer el teclado con node.js.
+2. Vamos a controlar el servomotor leyendo el teclado con node.js.
 
 ```js
 // write-serial.js
