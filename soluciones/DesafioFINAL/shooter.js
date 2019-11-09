@@ -3,9 +3,8 @@ const SerialPort = require('serialport');
 const port = new SerialPort('COM5');
 
 ioHook.on("mousemove", event => {
-  console.log(event);
-   let pos = Math.round(event.x / 6) + 1;
-   if (pos > 180) pos = 180; // remember angle max is 180
+  // remember angle max is 180 (1080 / 6)
+   const pos = event.x > 1080 ? 180 : Math.round(event.x / 6);
    port.write([pos]);
 });
 ioHook.on("mouseclick", event => {
