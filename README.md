@@ -16,6 +16,12 @@
 - [Photoresistor](https://es.aliexpress.com/item/32623615207.html?spm=a2g0s.9042311.0.0.274263c0NZAqoH)
 - [TMP36](https://es.aliexpress.com/item/33000245948.html?spm=a2g0s.9042311.0.0.274263c0NZAqoH)
 
+# Presentaciones
+
+| Bucle Inicial  | Principal |  Final  |
+| -------------- | --------- | ------- |
+| <a href="docs/Loop.NodebotsES.Hackmadrid.Initial.pdf"><img src="img/presentations/loop.jpg" width="200" style="float:left;width:200px;"/></a>  | <a href="docs/Intro1.NodebotsWorkshop-.HackMadrid.pdf"><img src="img/presentations/main.jpg" width="200" style="float:left;width:200px;"/></a>  | <a href="docs/Loop.NodebotsES.Hackmadrid.Initial.pdf"><img src="img/presentations/end.jpg" width="200" style="float:left;width:200px;"/></a> |
+
 # Como Empezar
 
 ## Instalar Software
