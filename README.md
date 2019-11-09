@@ -265,6 +265,6 @@ ioHook
 
 # Instala Firmata y usa Johnny Five.
 
-![examples.firmata.png](examples.firmata.png)
+![img/examples.firmata.png](img/examples.firmata.png)
 
 Si hay tiempo vemos un poco que es Firmata y Johnny Five.
