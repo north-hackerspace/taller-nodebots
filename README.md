@@ -167,6 +167,8 @@ Ya sabemos que funciona bien.
 
 # Desafío 6: Leer datos del arduino.
 
+![img/6.arduinotonode.jpg](img/6.arduinotonode.jpg)
+
 1. El arduino manda datos a traves de `Serial.write()`.
 2. Usar node.js y serialport para leer el estado de los botones en el ultimo desafio.
 
@@ -177,11 +179,10 @@ const port = new SerialPort('COM5')  // <--- PUERTO DONDE ESTA CONECTADO EL ARDU
 port.on('data', data => console.log(Number(data)))
 ```
 
-![img/6.arduinotonode.jpg](img/6.arduinotonode.jpg)
-
-
 
 # Desafío 7: Mandar datos al arduino.
+
+![img/7.nodetoarduino.jpg](img/6.arduinotonode.jpg)
 
 1. El arduino lee datos a traves de `Serial.read()`.
 2. Vamos a controlar el servomotor a traves de leer el teclado con node.js.
