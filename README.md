@@ -226,3 +226,34 @@ loop() {
   delay(100); // espera a que el servo comienze a moverse
 }
 ```
+
+# Desafío FINAL: Dispara a tu compi!
+
+Igual que en el ultimo desafio. Pero vamos a controlar el servomotor con el raton del PC y hacer un zumbido cuando dispares.
+
+Necesitamos:
+
+- Arduino conectado al Servomotor
+- Arduino conectado al Zumbador
+- Nodejs con `npm install iohook`
+
+```js
+const ioHook = require('iohook');
+const SerialPort = require('serialport');
+const port = new SerialPort('COM5');
+
+ioHook
+  .on("mousemove", event => {
+    console.log(event);
+    // remember angle max is 180
+    let pos = Math.round(event.x/6);
+    if (pos<0) pos = 0;
+    if (pos>180) pos = 180;
+    port.write([pos]);
+  })
+  .on("mouseclick", event => {
+    console.log(event);
+    port.write([255]);
+  })
+  .start();
+```
