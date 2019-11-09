@@ -89,7 +89,9 @@ Controlar la brilleza del LED usando la fotoresistencia
 
 ![img/3.buzzer.png](img/3.buzzer.png)
 
-Como crea el arduino sonido?
+PREGUNTA: Como crea el arduino sonido?
+
+RESPUESTA: Encendiendo y apagando un pin muy rapidamente. Cuanto más rápido enciende y apaga, más agudo será el sonido.
 
 ![img/51c495ebce395f1b5a000000.png](img/51c495ebce395f1b5a000000.png)
 
