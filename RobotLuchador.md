@@ -28,3 +28,7 @@
 - Si un robot sale (o pisa) fuera del ring, pierde ante su oponente.
 - El robot que gane 2 rondas, se califica para el siguiente combate.
 - Si ningún robot gana una ronda, el árbitro decide a su propio criterio. Incluyéndose cosas como cual de los robots le parece más chulo.
+
+## Instrucciones
+
+https://github.com/nodebotsES/simplebot
