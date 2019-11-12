@@ -275,7 +275,23 @@ ioHook
 
 ![img/examples.firmata.png](img/examples.firmata.png)
 
-Si hay tiempo vemos un poco que es Firmata y Johnny Five.
+Instala Firmata usando el ejemplo de Arduino en el grafico superior.
+
+Luego, abre una consola e instala Johnny Five: `npm i -g johnny-five`.
+
+Y crea un fichero asi:
+
+```js
+var five = require("johnny-five");
+var board = new five.Board();
+
+board.on("ready", () => {
+  // Create an Led on pin 13
+  var led = new five.Led(13);
+  // Blink every half second
+  led.blink(500);
+});
+```
 
 # Robot luchador
 
