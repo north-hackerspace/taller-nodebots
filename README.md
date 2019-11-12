@@ -171,6 +171,12 @@ const SerialPort = require('serialport')
 SerialPort.list().then(ports => ports.forEach(port => console.log(port)))
 ```
 
+Para ejecutar el programa hacemos lo siguiente desde la consola
+
+```sh
+$ node list-ports.js
+```
+
 Esto nos dara un listado de puertos seriales (En windows `COM5` etc, en unix/mac `/dev/cu.wchusbserial`).
 
 Ya sabemos que funciona bien. 
@@ -279,9 +285,10 @@ Instala Firmata usando el ejemplo de Arduino en el grafico superior.
 
 Luego, abre una consola e instala Johnny Five: `npm i -g johnny-five`.
 
-Y crea un fichero asi:
+Y crea un fichero de javascript asi:
 
 ```js
+// blink.js
 var five = require("johnny-five");
 var board = new five.Board();
 
@@ -292,6 +299,8 @@ board.on("ready", () => {
   led.blink(500);
 });
 ```
+
+Y ejecutalo con `node blink.js`
 
 # Robot luchador
 
